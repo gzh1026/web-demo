@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/bagevent_test</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">admin</property>
+
+      <!-- DB schema will be updated if needed -->
+      <property name="hibernate.hbm2ddl.auto">update</property>
+      <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+      <property name="hibernate.show_sql">true</property>
+      <property name="hibernate.format_sql">true</property>
+      <mapping class="com.test.dao.User"/>
+      <mapping resource="User.hbm.xml"/>
+      <mapping resource="Userloginlog.hbm.xml"/>
+      <mapping class="com.test.dao.Userloginlog"/>
+
+<!--    <mapping class="com.test.entity.user"/>-->
+  </session-factory>
+</hibernate-configuration>

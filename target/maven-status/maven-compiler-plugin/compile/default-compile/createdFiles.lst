@@ -1,0 +1,5 @@
+com\test\entity\user.class
+com\test\dao\User.class
+com\test\dao\Userloginlog.class
+com\test\controller\UserController.class
+com\test\entity\userloginlog.class
